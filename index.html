@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namoro Toxico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="pedido-box">
+            <h1>Aceita namorar comigo? 😊</h1>
+            <h1>A escolha é toda sua 👀</h1>
+        </div>
+        <div class="buttons">
+            <button id="sim" onclick="ResponderSim()">Sim</button>
+            <button id="nao" onmouseover="Movernao()">Não</button>
+        </div>
+        <div id="message"></div>
+    </div>
+
+    <script>
+        function ResponderSim() {
+            document.body.innerHTML = `
+                <div id="final-box">
+                    <h1>Ebaaaaa, eu sabia que você me amava ❤️</h1>
+                    <div class="coracaobate">❤️</div>
+                </div>
+            `;
+        }
+
+        function Movernao() {
+            let button = document.getElementById("nao");
+            let x = Math.random() * (window.innerWidth - 200);
+            let y = Math.random() * (window.innerHeight - 100);
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
